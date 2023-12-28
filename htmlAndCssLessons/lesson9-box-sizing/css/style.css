@@ -1,0 +1,39 @@
+body,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.photo{
+    float: left;
+}
+
+.box{
+    /* clear: right; */
+    float: left;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000;
+    border-top:12px solid #00ff73 ;
+    border-right:12px double #00ff73 ;
+    padding: 100px;
+    /* padding: 100px 20px 30px 40px; */
+    /* margin: 100px 20px 30px 40px; */
+    /* display: inline-block; */
+}
+
+
+/* div{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+span{
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: green;
+} */
