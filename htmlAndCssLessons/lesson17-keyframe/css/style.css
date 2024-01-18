@@ -1,0 +1,88 @@
+@import url("reset.css");
+
+
+/* 
+.box{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: qusar;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  clip-path: polygon(15% 15%, 8% 83%, 81% 83%, 31% 66%, 22% 25%, 34% 21%);
+}
+
+@keyframes qusar{
+    0%{
+      left: 0;
+      top: 0;
+    }
+    20%{
+      left: 300px;
+      transform: rotate(20deg);
+      background-color: yellow;
+
+      top: 0;
+    }
+    50%{
+      left: 300px;
+      top: 300px;
+      transform: scale(2);
+      background-color: green;
+
+    }
+    80%{
+      left: 0;
+      top: 300px;
+    }
+    100%{
+      left: 0;  
+      top: 0;
+    }
+} */
+
+
+/* @keyframes qusar{
+  from{
+    left: 0;
+  }
+  to{
+    left: 300px;
+  }
+} */
+
+.orbit{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  animation: firfira 5s infinite linear;
+}
+
+@keyframes firfira {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.planet{
+  position: absolute;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+input:focus-visible {
+  outline: none;
+  border: 2px solid red;
+}
+
+/* input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+} */
