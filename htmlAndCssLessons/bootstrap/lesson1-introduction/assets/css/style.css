@@ -1,0 +1,9 @@
+.box{
+    height: 400px;
+    background-color: red;
+}
+
+.mycolor{
+    background-color: red !important;
+    color: #fff;
+}
