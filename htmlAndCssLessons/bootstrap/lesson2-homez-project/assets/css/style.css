@@ -1,0 +1,18 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+
+}
+/* 
+.dropdown-menu{
+    width: 500px;
+} */
+
+.hero{
+    height: 90vh;
+    background-image: url('https://creativelayers.net/themes/homez-html/images/home/home-9.jpg');
+}
+
+.my-size{
+    font-size: 50px !important;
+}
