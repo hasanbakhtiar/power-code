@@ -183,22 +183,39 @@
 // }
 
 
-const time = parseInt(window.prompt());
+// const time = parseInt(window.prompt());
 
 
-if (time >= 5 && time < 12) {
-    console.log('good morning');
-    if (time === 7) {
-        console.log('get up');
-    } else if (time === 9) {
-        console.log('have a breakfast');
-    }
-} else if (time > 12 && time < 17) {
-    console.log('good afternoon');
-} else if (time > 17 && time < 21) {
-    console.log('good evening');
-} else if (time >= 21 && time < 23) {
-    console.log("good night");
-} else {
-    console.log("wrong time");
-}
+// if (time >= 5 && time < 12) {
+//     console.log('good morning');
+//     if (time === 7) {
+//         console.log('get up');
+//     } else if (time === 9) {
+//         console.log('have a breakfast');
+//     }
+// } else if (time > 12 && time < 17) {
+//     console.log('good afternoon');
+// } else if (time > 17 && time < 21) {
+//     console.log('good evening');
+// } else if (time >= 21 && time < 23) {
+//     console.log("good night");
+// } else {
+//     console.log("wrong time");
+// }
+
+
+
+// const info  = "hello";
+// switch(info){
+//     case 5:
+//         console.log('this is five');
+//     break;
+
+//     case "hello":
+//         console.log('this is hello');
+//     break;
+
+//     default:
+//         console.log('this is default');
+//     break;
+// }
