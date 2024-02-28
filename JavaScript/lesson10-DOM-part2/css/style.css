@@ -1,0 +1,46 @@
+#menu{
+    width: 30%;
+    height: 70vh;
+    background-color: bisque;
+    position: absolute;
+    top: 70px;
+    transition: 1s;
+}
+
+.hide{
+    right: -30%;
+}
+
+.show{
+    right: 0px;
+}
+
+
+/* .light *{
+    background-color: #fff;
+    color: #000;
+}
+
+.dark *{
+    background-color: #000;
+    color: #fff;
+} */
+
+
+/* .colorFull{
+    color: red;
+    background-color: pink;
+    border: 2px solid brown;
+    width: 30%;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.monoColor{
+    color: #fff;
+    background-color: #000;
+    border: 2px solid grey;
+    width: 30%;
+    padding: 10px;
+}
+ */
