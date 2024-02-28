@@ -28,7 +28,11 @@ modeBtn.onclick=()=>{
 
 
 document.querySelector("#menu-btn").onclick=()=>{
-    document.querySelector('#menu').className="show";
+    if (document.querySelector("#menu").className == "hide") {
+        document.querySelector('#menu').className="show";
+    }else{
+        document.querySelector('#menu').className="hide";
+    }
 }
 
 
