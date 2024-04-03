@@ -1,0 +1,10 @@
+.info{
+    display: flex;
+    gap:20px;
+    ol{
+        border: 2px solid #000;
+        border-radius: 20px;
+        padding: 40px;
+
+    }
+}
