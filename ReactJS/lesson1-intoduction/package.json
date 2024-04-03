@@ -1,0 +1,30 @@
+{
+  "name": "lesson1-intoduction",
+  "version": "1.0.0",
+  "description": "This project for testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server public",
+    "wb": "webpack --mode production"
+  },
+  "keywords": [
+    "test",
+    "React enter"
+  ],
+  "author": "Hasan Bakhtiar",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^9.1.3",
+    "file-loader": "^6.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
