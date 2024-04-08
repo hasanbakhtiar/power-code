@@ -11,14 +11,14 @@ class App extends Component {
         return (
             <>
                 <div className='info container mt-5'>
-                    <Counter />
+                    {/* <Counter /> */}
 
 
-                    {/* <div className="row g-5">
-                    {phones.map(item => (
-                        <SingleCard title={item.title} photo={item.image} />
+                    <div className="row g-5">
+                    {phones.map((item,c) => (
+                        <SingleCard key={c} title={item.title} photo={item.image} />
                     ))}
-                </div> */}
+                </div>
                 </div>
             </>
         )
