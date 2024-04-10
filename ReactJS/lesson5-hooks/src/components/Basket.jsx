@@ -10,9 +10,13 @@ const product = {
 
 const Basket = () => {
     const [count, setCount] = useState(1);
+    const [alert,setAlert] = useState({
+        text:"",
+        style:""
+    })
     return (
         <div className="container">
-            <p className='alert alert-danger mt-5 text-center'>test</p>
+            <p className={`${alert.style} mt-5 text-center`}>{alert.text}</p>
             <div className='d-flex align-items-center'>
                 <img width={200} src={product.img} alt="" />
                 <div className='ms-5'>
@@ -21,14 +25,22 @@ const Basket = () => {
                     <button className='btn btn-danger' onClick={() => {
                         if (count > 1) {
                             setCount(count - 1)
+                            setAlert({
+                                text:"",
+                                style:""
+                            })
                         }
                     }}>-</button>
                     <span className='mx-3'>{count}</span>
                     <button className='btn btn-success' onClick={() => {
                         if (count < product.stock) {
                             setCount(count + 1)
+                            
                         } else {
-                            alert("stock out")
+                            setAlert({
+                                text:"Stock out",
+                                style:"alert alert-danger"
+                            })
                         }
                     }}>+</button>
 
