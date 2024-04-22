@@ -5,12 +5,15 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 import './css/style.css';
 import App from './App'
 import { ProductProvider } from './context/ProductContext';
+import { TargetEmailProvider } from './context/TargetEmailContext';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ProductProvider>
-      <App />
+      <TargetEmailProvider>
+        <App />
+      </TargetEmailProvider>
     </ProductProvider>
   </React.StrictMode>,
 )

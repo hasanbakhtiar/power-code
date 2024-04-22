@@ -7,6 +7,8 @@ import Header from './components/Header';
 import Products from './pages/Products';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductDetails from './pages/ProductDetails';
+import Users from './pages/Users';
+import TargetEmail from './pages/TargetEmail';
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
             <Route path="/products" element={<Products/>}></Route>
             <Route path="/products/:slug" element={<ProductDetails/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
+            <Route path="/users" element={<Users/>}></Route>
+            <Route path="/email" element={<TargetEmail/>}></Route>
             <Route path="*" element={<NotFoundPage/>}></Route>
         </Routes>
     </BrowserRouter>

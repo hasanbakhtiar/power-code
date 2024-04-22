@@ -23,6 +23,12 @@ const Header = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/contact">Contact</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/users">Users</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/email">Target email</NavLink>
+                        </li>
                     </ul>
                     
                 </div>
