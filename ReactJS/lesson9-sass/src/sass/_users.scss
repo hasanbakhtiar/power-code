@@ -1,0 +1,36 @@
+.user-list{
+    padding: 20px;
+    // @include fcenter();
+    li{
+        // @extend .user-list;
+        background-color: $main-color;
+        a{
+            color: $light;
+        }
+    }
+}
+
+
+$text-color:#454545;
+@if($text-color==#454545){
+    h1{
+        color: red;
+    }
+}
+@else{
+    h1{
+        color: green;
+    }
+}
+
+$base-color: #036;
+
+@for $i from 1 through 10 {
+  li:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+
+
+
+
