@@ -1,8 +1,9 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import { shopReducer } from "../reducers/shopReducer";
+import { thunk } from "redux-thunk";
 
 const shopStore = ()=>{
-    const store  = createStore(shopReducer);
+    const store  = createStore(shopReducer,applyMiddleware(thunk));
     return store;
 }
 

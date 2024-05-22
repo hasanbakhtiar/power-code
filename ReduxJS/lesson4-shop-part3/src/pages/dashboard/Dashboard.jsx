@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
-import { deleteProduct } from '../../tools/actions/shopAction';
+import { deleteProduct, deleteProductToDatabase } from '../../tools/actions/shopAction';
 import slugify from 'slugify';
 
 function Dashboard() {
@@ -36,7 +36,7 @@ function Dashboard() {
             <td>{item.category}</td>
             <td>{item.desc}</td>
             <td><LinkContainer to={`/dashboard/edit/${slugify(item.title)}`}><Button variant='warning'>Edit</Button></LinkContainer></td>
-            <td><Button onClick={()=>{dispatch(deleteProduct({id:item.id}))}} variant='danger'>Del</Button></td>
+            <td><Button onClick={()=>{dispatch(deleteProductToDatabase(item.id))}} variant='danger'>Del</Button></td>
           </tr>
         ))}
 
