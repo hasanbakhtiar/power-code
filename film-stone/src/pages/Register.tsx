@@ -42,7 +42,13 @@ const Register = () => {
                         
                     }
                 }
-                createuser();
+                const checkuser = async()=>{
+                  const {data} = await supabase.from('users').select();
+                  data?.map((item:any)=>(
+                    item.email === emailRef.current?.value ? swal('This email already was used!','','error'):createuser()
+                  ))
+                }
+                checkuser();
             }
     }
   };

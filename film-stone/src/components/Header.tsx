@@ -2,6 +2,11 @@ import { Link, NavLink } from "react-router-dom"
 
 
 const Header = () => {
+  const logout = ()=>{
+    localStorage.setItem('adminlogin','false');
+    localStorage.setItem('login','false');
+    window.location.reload();
+  }
   return (
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container">
@@ -16,8 +21,10 @@ const Header = () => {
         </li>
       </ul>
       <div>
-        <Link className="btn btn-warning" to="/login">Login</Link>
+            {localStorage.getItem("adminlogin") === 'true'?<div><Link className="btn btn-warning" to="/admin">Admin</Link><button className="btn btn-danger ms-3" onClick={logout}>Log out</button></div>:localStorage.getItem('login')==="true"?<div><Link className="btn btn-warning" to="/useraccount">{localStorage.getItem('username')}</Link><button className="btn btn-danger ms-3" onClick={logout}>Log out</button></div>:<Link className="btn btn-warning" to="/login">Login</Link>}
+            
         {localStorage.getItem('adminlogin')==='true'?<Link className="btn btn-dark ms-3" to="/dashboard">Dashboard</Link>:""}
+
       </div>
     
     </div>

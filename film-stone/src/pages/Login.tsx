@@ -13,8 +13,6 @@ const adminuser:userType = {
 }
 
 
-const normaluserdata:any = localStorage.getItem('userdata');
-const normaluser:any = JSON.parse(normaluserdata);
 
 
 const Login = () => {
@@ -34,9 +32,10 @@ const Login = () => {
                     window.location.reload();
                 },2000);
             }else{
-                const createLogin = ()=>{
+                const createLogin = (user:string)=>{
                     localStorage.setItem('login','true');
                     localStorage.setItem('adminlogin','false');
+                    localStorage.setItem('username',user);
                 swal('User login had been successfully','','success');
                 setTimeout(()=>{
                     window.location.reload();
@@ -50,7 +49,7 @@ const Login = () => {
                         
                     }else{
                         data.map((item:any)=>(
-                                item.email === emailRef.current!.value && item.password ===  passRef.current!.value ? createLogin():swal("Email or password is wrong!","","error")
+                                item.email === emailRef.current!.value && item.password ===  passRef.current!.value ? createLogin(item.fullname):swal("Email or password is wrong!","","error")
                         ))
                         
                     }
