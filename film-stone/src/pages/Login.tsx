@@ -48,9 +48,22 @@ const Login = () => {
                         console.log(error);
                         
                     }else{
-                        data.map((item:any)=>(
-                                item.email === emailRef.current!.value && item.password ===  passRef.current!.value ? createLogin(item.fullname):swal("Email or password is wrong!","","error")
-                        ))
+                        // data.map((item:any)=>(
+                        //         item.email === emailRef.current!.value && item.password ===  passRef.current!.value ? createLogin(item.fullname):swal("Email or password is wrong!","","error")
+                        // ))
+
+                        const userfind:any = data?.find((p:any)=>{ return p.email == emailRef.current!.value});
+                        if (userfind === undefined) {
+                            swal("Email or password is wrong!","","error");
+                            
+                        }else{
+                            if (userfind.password === passRef.current!.value) {
+                                createLogin(userfind.fullname);
+                            }else{
+                                swal("Email or password is wrong!","","error");
+                            }
+                        }
+                        
                         
                     }
 
